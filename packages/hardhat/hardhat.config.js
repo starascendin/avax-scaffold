@@ -26,7 +26,7 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 //
 // Select the network you want to deploy to here:
 //
-const defaultNetwork = "localhost";
+const defaultNetwork = "localAvalanche";
 
 const mainnetGwei = 21;
 
@@ -606,3 +606,22 @@ task("send", "Send ETH")
 
     return send(fromSigner, txRequest);
   });
+
+task("accounts", "Prints the list of accounts", async (args, hre) => {
+  const accounts = await hre.ethers.getSigners();
+  accounts.forEach((account) => {
+    console.log(account.address);
+  });
+});
+
+task(
+  "balances",
+  "Prints the list of AVAX account balances",
+  async (args, hre) => {
+    const accounts = await hre.ethers.getSigners();
+    for (const account of accounts) {
+      const balance = await hre.ethers.provider.getBalance(account.address);
+      console.log(`${account.address} has balance ${balance.toString()}`);
+    }
+  }
+);

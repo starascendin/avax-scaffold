@@ -5,11 +5,11 @@ import "hardhat/console.sol";
 // import "@openzeppelin/contracts/access/Ownable.sol"; 
 // https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol
 
-contract YourContract {
+contract YourContractV2 {
 
   event SetPurpose(address sender, string purpose);
 
-  string public purpose = "Building Unstoppable !!!2222";
+  string public purpose = "Building Unstoppable !!!  VVV";
 
   constructor() payable {
     // what should we do on deploy?

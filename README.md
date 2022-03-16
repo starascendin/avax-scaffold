@@ -1,3 +1,8 @@
+# BL AVAX notes
+run things locally -- https://github.com/scaffold-eth/scaffold-eth/pull/306
+
+
+
 # 🏗 Scaffold-ETH
 
 > everything you need to build on Ethereum! 🚀
